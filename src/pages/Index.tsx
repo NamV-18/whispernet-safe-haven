@@ -175,25 +175,6 @@ const Index = () => {
               </p>
             </div>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-              <div className="text-sm text-gray-600">Support Available</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">150K+</div>
-              <div className="text-sm text-gray-600">Women Protected</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-sm text-gray-600">Cities Covered</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
-              <div className="text-sm text-gray-600">Response Rate</div>
-            </div>
-          </div>
         </div>
       </section>
 
