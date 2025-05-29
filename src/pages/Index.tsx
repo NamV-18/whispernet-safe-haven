@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Shield, MapPin, Bot, Users, MessageSquare, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import SafetyChatbot from '@/components/SafetyChatbot';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -144,32 +144,54 @@ const Index = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8 rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                <Shield className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800">Our Mission</h3>
+              <p className="text-gray-600 leading-relaxed">
                 Whispernet is dedicated to ensuring the safety and security of women. Our innovative app provides essential tools and resources to address various emergency situations efficiently.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
+                <Users className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800">Our Community</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We believe every woman deserves to feel safe and empowered. Through technology, community, and education, we're creating a world where safety is never a concern.
               </p>
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="text-center p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">24/7</div>
-                  <div className="text-sm text-gray-600">Support Available</div>
-                </div>
-                <div className="text-center p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">100K+</div>
-                  <div className="text-sm text-gray-600">Women Protected</div>
-                </div>
-              </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl flex items-center justify-center">
-                <Shield className="h-32 w-32 text-white" />
+
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-red-500 rounded-full flex items-center justify-center">
+                <Bot className="h-10 w-10 text-white" />
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full flex items-center justify-center">
-                <Users className="h-12 w-12 text-white" />
-              </div>
+              <h3 className="text-xl font-bold text-gray-800">Our Technology</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Advanced safety features including AI-powered guidance, real-time location tracking, and instant emergency response systems designed specifically for women's safety needs.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
+              <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+              <div className="text-sm text-gray-600">Support Available</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
+              <div className="text-3xl font-bold text-purple-600 mb-2">150K+</div>
+              <div className="text-sm text-gray-600">Women Protected</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
+              <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
+              <div className="text-sm text-gray-600">Cities Covered</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg">
+              <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
+              <div className="text-sm text-gray-600">Response Rate</div>
             </div>
           </div>
         </div>
@@ -264,62 +286,18 @@ const Index = () => {
 
       {/* Chat Bot Section */}
       <section id="chatbot" className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Safety Assistant Bot
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8 rounded-full"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Get instant guidance on safety situations, emergency procedures, and self-defense techniques from our AI-powered safety assistant.
+            </p>
           </div>
           
-          <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 shadow-xl">
-            <CardHeader className="text-center">
-              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
-                <Bot className="h-12 w-12 text-white" />
-              </div>
-              <CardTitle className="text-2xl font-bold text-gray-800">Safety Guidance Chatbot</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-center text-gray-600 text-lg">
-                Our AI-powered chatbot provides instant guidance on safety situations, emergency procedures, and self-defense techniques.
-              </p>
-              
-              <div className="bg-white rounded-lg p-6 space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                    <Bot className="h-4 w-4 text-white" />
-                  </div>
-                  <div className="bg-purple-100 rounded-lg p-3 flex-1">
-                    <p className="text-sm">Hi! I'm your safety assistant. I can help you with emergency procedures, safety tips, and more. How can I assist you today?</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-end space-x-3 justify-end">
-                  <div className="bg-pink-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm">What should I do if I feel unsafe walking alone?</p>
-                  </div>
-                  <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
-                    <Users className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                    <Bot className="h-4 w-4 text-white" />
-                  </div>
-                  <div className="bg-purple-100 rounded-lg p-3 flex-1">
-                    <p className="text-sm">Stay alert, stick to well-lit areas, share your location with trusted contacts, and consider using our SOS feature. Would you like more specific safety tips?</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3">
-                  Start Chat
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <SafetyChatbot />
         </div>
       </section>
 
